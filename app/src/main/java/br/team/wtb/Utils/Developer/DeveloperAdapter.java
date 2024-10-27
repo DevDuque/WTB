@@ -66,10 +66,7 @@ public class DeveloperAdapter extends RecyclerView.Adapter<DeveloperAdapter.Deve
     private void shareDeveloperInfo(View view, Developer developer) {
 
         String shareText = "WTB: " + "github.com/devduque/WTB" +
-                "\nDev from WTB Team: " + developer.getName() +
-                "\nRole: " + developer.getRole() +
-                "\nDescription: " + developer.getDescription() +
-                "\nGitHub: " + developer.getGithubLink();
+                "\nDev from WTB Team:" + developer.toString();
 
         Intent shareIntent = new Intent(Intent.ACTION_SEND);
         shareIntent.setType("text/plain");

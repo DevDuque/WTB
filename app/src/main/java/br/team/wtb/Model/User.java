@@ -18,6 +18,15 @@ public class User {
         this.password = password;
     }
 
+    @Override
+    public String toString() {
+        return
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", email='" + email + '\'' +
+                ", cellphone='" + cellphone + '\'';
+    }
+
     public UUID getId() {
         return id;
     }

@@ -76,11 +76,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHol
     // Método para compartilhar os dados do Filme
     private void shareMovieInfo(View view, Movie movie) {
 
-        String shareText = "WTB: " + "github.com/devduque/WTB" +
-                "\nMovie from WTB: " + movie.getMovieName() +
-                "\nYear: " + movie.getMovieYear() +
-                "\nRating: " + movie.getMovieRating() +
-                "\nTrailer: " + movie.getMovieTrailerLink();
+        String shareText = "WTB: " + "github.com/devduque/WTB" + movie.toString();
 
         Intent shareIntent = new Intent(Intent.ACTION_SEND);
         shareIntent.setType("text/plain");

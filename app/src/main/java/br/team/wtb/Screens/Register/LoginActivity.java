@@ -2,6 +2,7 @@ package br.team.wtb.Screens.Register;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
@@ -61,12 +62,15 @@ public class LoginActivity extends AppCompatActivity {
             return;
         }
 
-        User user = userDAO.login(email, password);  // Tenta fazer realizar o login
+        User user = userDAO.login(email, password);  // Tenta realizar o login
 
         if (user != null) {
+
             Toast.makeText(this, "Login bem-sucedido!", Toast.LENGTH_SHORT).show();
             Intent homeScreen = new Intent(LoginActivity.this, HomeActivity.class);
-            System.out.println("Usuário logado com sucessso");
+
+            Log.d("LoginActivity", "Usuário logado com sucesso: " + user.toString());
+
             startActivity(homeScreen);
             finish();  // Fecha a tela de login
         } else {

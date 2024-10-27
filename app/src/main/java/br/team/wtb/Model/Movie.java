@@ -31,6 +31,15 @@ public class Movie implements Serializable {
         this.movieTrailerLink = movieTrailerLink;
     }
 
+    @Override
+    public String toString() {
+        return
+                "movieName='" + movieName + '\'' +
+                ", movieYear=" + movieYear +
+                ", movieRating=" + movieRating +
+                ", movieTrailerLink='" + movieTrailerLink + '\'';
+    }
+
     public Integer getPosterImgResId() {
 
         return posterImgResId;

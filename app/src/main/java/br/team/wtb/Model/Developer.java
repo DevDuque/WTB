@@ -15,6 +15,15 @@ public class Developer {
         this.githubLink = githubLink;
     }
 
+    @Override
+    public String toString() {
+        return
+                "name='" + name + '\'' +
+                ", githubLink='" + githubLink + '\'' +
+                ", role='" + role + '\'' +
+                ", description='" + description + '\'';
+    }
+
     public Integer getPhotoURL() {
         return photoURL;
     }

@@ -1,6 +1,7 @@
 package br.team.wtb.Screens.Register;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
@@ -69,7 +70,7 @@ public class SignInActivity extends AppCompatActivity {
 
         if (success) {
             Toast.makeText(this, "Usuário criado com sucesso!", Toast.LENGTH_SHORT).show();
-            System.out.println("Usuário criado com sucessso");
+            Log.d("SignInActivity", "Usuário criado com sucesso: " + user.toString());
             finish();  // Fecha a tela de registro
         } else {
             Toast.makeText(this, "Erro ao criar usuário.", Toast.LENGTH_SHORT).show();
