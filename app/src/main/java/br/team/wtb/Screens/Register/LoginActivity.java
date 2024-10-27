@@ -1,6 +1,7 @@
 package br.team.wtb.Screens.Register;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -17,6 +18,7 @@ import br.team.wtb.Database.UserDAO;
 import br.team.wtb.Model.User;
 import br.team.wtb.R;
 import br.team.wtb.Screens.Inside.HomeActivity;
+import br.team.wtb.Utils.Constants;
 import br.team.wtb.Utils.Theme.ThemeManager;
 
 public class LoginActivity extends AppCompatActivity {
@@ -91,6 +93,12 @@ public class LoginActivity extends AppCompatActivity {
             Intent homeScreen = new Intent(LoginActivity.this, HomeActivity.class);
 
             Log.d("LoginActivity", "Usuário logado com sucesso: " + user.toString());
+
+            SharedPreferences preferences = getSharedPreferences(Constants.PREFS_NAME, MODE_PRIVATE);
+            SharedPreferences.Editor editor = preferences.edit();
+            editor.putBoolean(Constants.KEY_IS_LOGGED_IN, true);
+            editor.putString(Constants.KEY_USER_ID, user.getId().toString());
+            editor.apply();
 
             startActivity(homeScreen);
             finish();  // Fecha a tela de login

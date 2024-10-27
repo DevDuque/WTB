@@ -5,13 +5,17 @@ import android.content.SharedPreferences;
 import android.util.Log;
 
 import br.team.wtb.R;
+import br.team.wtb.Utils.Constants;
 
 public class ThemeManager {
 
     // Nome das preferências compartilhadas
-    private static final String PREFS_NAME = "AppPrefs";
+    private static final String PREFS_NAME = Constants.PREFS_NAME;
     // Chave para armazenar o tema da aplicação
-    private static final String KEY_THEME = "app_theme";
+    private static final String KEY_THEME = Constants.KEY_THEME;
+
+
+
 
     // Instância única do ThemeManager
     private static ThemeManager instance;

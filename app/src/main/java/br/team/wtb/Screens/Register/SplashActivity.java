@@ -1,5 +1,6 @@
 package br.team.wtb.Screens.Register;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.os.Handler;
@@ -10,6 +11,8 @@ import android.view.animation.AlphaAnimation;
 import androidx.appcompat.app.AppCompatActivity;
 
 import br.team.wtb.R;
+import br.team.wtb.Screens.Inside.HomeActivity;
+import br.team.wtb.Utils.Constants;
 import br.team.wtb.Utils.Theme.ThemeManager;
 
 public class SplashActivity extends AppCompatActivity {
@@ -27,8 +30,13 @@ public class SplashActivity extends AppCompatActivity {
         setContentView(R.layout.activity_splash);
         EdgeToEdge.enable(this);
 
+        // Checando se o usuário já estava logado
+        SharedPreferences preferences = getSharedPreferences(Constants.PREFS_NAME, MODE_PRIVATE);
+        boolean isLoggedIn = preferences.getBoolean(Constants.KEY_IS_LOGGED_IN, false);
+
         // Encontra a raiz da SplashScreen
         View splashScreen = findViewById(R.id.splash_activity);
+
 
         // Começa uma animação de fade-out depois de SPLASH_DISPLAY_LENGTH
         new Handler().postDelayed(() -> {
@@ -44,11 +52,16 @@ public class SplashActivity extends AppCompatActivity {
 
                 @Override
                 public void onAnimationEnd(Animation animation) {
-                    // Começa a LoginActivity
-                    Intent mainIntent = new Intent(SplashActivity.this, LoginActivity.class);
+                    // Start the appropriate activity based on login status
+                    Intent mainIntent;
+                    if (isLoggedIn) {
+                        mainIntent = new Intent(SplashActivity.this, HomeActivity.class);
+                    } else {
+                        mainIntent = new Intent(SplashActivity.this, LoginActivity.class);
+                    }
                     startActivity(mainIntent);
                     finish();
-                    overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+                    overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out); // Optional transition
                 }
 
                 @Override

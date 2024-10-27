@@ -1,6 +1,8 @@
 package br.team.wtb.Screens.Inside;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 
@@ -16,6 +18,7 @@ import java.util.List;
 
 import br.team.wtb.Model.Movie;
 import br.team.wtb.R;
+import br.team.wtb.Utils.Constants;
 import br.team.wtb.Utils.Menu.MenuController;
 import br.team.wtb.Utils.Movie.MovieAdapter;
 import br.team.wtb.Utils.Movie.MovieRepository;
@@ -43,6 +46,13 @@ public class HomeActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+        SharedPreferences preferences = getSharedPreferences(Constants.PREFS_NAME, MODE_PRIVATE);
+        boolean isLoggedIn = preferences.getBoolean(Constants.KEY_IS_LOGGED_IN, false);
+
+        String userId = preferences.getString(Constants.KEY_USER_ID, "Nenhum ID achado, algo deu errado!");
+        Log.d("HomeActivity", "ID do usuário logado: " + userId);
+
 
         // Inicializa o contêiner do tema
         switchContainer = findViewById(R.id.theme_switch);

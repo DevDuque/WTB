@@ -4,6 +4,7 @@ import static androidx.core.content.ContextCompat.startActivity;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.widget.TextView;
 
 import br.team.wtb.R;
@@ -11,6 +12,7 @@ import br.team.wtb.Screens.Inside.AboutActivity;
 import br.team.wtb.Screens.Inside.FavoritesActivity;
 import br.team.wtb.Screens.Inside.HomeActivity;
 import br.team.wtb.Screens.Register.LoginActivity;
+import br.team.wtb.Utils.Constants;
 
 public class MenuController {
 
@@ -49,6 +51,10 @@ public class MenuController {
         });
 
         exitItem.setOnClickListener(v -> {
+            // Clear login state
+            SharedPreferences preferences = activity.getSharedPreferences(Constants.PREFS_NAME, Activity.MODE_PRIVATE);
+            preferences.edit().putBoolean(Constants.KEY_IS_LOGGED_IN, false).apply();
+
             Intent intent = new Intent(activity, LoginActivity.class);
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
             activity.startActivity(intent);
