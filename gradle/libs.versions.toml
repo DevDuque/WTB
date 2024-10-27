@@ -1,5 +1,6 @@
 [versions]
 agp = "8.5.1"
+jbcrypt = "0.4"
 junit = "4.13.2"
 junitVersion = "1.2.1"
 espressoCore = "3.6.1"
@@ -10,6 +11,7 @@ constraintlayout = "2.1.4"
 retrofit = "2.9.0"
 
 [libraries]
+jbcrypt = { module = "org.mindrot:jbcrypt", version.ref = "jbcrypt" }
 retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
 gsonConverter = { group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "retrofit" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }

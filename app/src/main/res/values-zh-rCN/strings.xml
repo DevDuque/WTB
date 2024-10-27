@@ -53,4 +53,14 @@
 
     <string name="three_dev_role"> 开发人员 </string>
     <string name="three_dev_description">2022年毕业于PUC Minas的生物学家，热爱技术。 \n\n目前正在PUC Minas攻读信息系统学位，并在UFMG参加以移动应用为重点的系统开发技术课程。</string>
+
+    <!-- Alerts for Users -->
+    <string name="error_signin">创建用户时出错。</string>
+    <string name="error_login">电子邮件或密码不正确。</string>
+    <string name="error_empty">请填写所有字段。</string>
+    <string name="error_duplicate">电子邮件已被使用，请选择其他电子邮件！</string>
+
+
+    <string name="success_login">登录成功！</string>
+    <string name="success_signin">用户创建成功！</string>
 </resources>

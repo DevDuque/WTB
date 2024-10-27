@@ -52,4 +52,14 @@
 
     <string name="three_dev_role"> Desenvolvedor </string>
     <string name="three_dev_description">Biólogo formado pela PUC Minas em 2022 e apaixonado por tecnologia. \n\nAtualmente cursando Sistemas de Informação na PUC Minas, além de um curso técnico em Desenvolvimento de Sistemas com ênfase em aplicações móveis na UFMG.</string>
+
+    <!-- Alerts for Users -->
+    <string name="error_signin"> Erro ao criar usuário.</string>
+    <string name="error_login"> Email ou senha incorretos. </string>
+    <string name="error_empty">Por favor, preencha todos os campos.</string>
+    <string name="error_duplicate">O email já está em uso, escolha outro!</string>
+
+
+    <string name="success_login"> Login bem-sucedido! </string>
+    <string name="success_signin"> Usuário criado com sucesso! </string>
 </resources>

@@ -3,7 +3,6 @@
 
     <!-- Splash Screen -->
     <string name="splash_title"> Cinematic Symphony </string>
-
     <string name="splash_subtitle"> When rhythm and visuals tell unforgettable stories </string>
 
     <!-- Login Screen & SignIn Screen -->
@@ -48,7 +47,6 @@
     <string name="menu_exit"> Exit </string>
 
     <!-- Devs -->
-
     <string name="one_dev_role"> Developer &amp; Designer </string>
     <string name="one_dev_description">Full-Stack Developer at the technology solutions company Teknisa. \n\nCurrently pursuing a degree in Information Systems at PUC Minas, as well as a technical course in Systems Development with an emphasis on mobile applications at UFMG.</string>
 
@@ -57,4 +55,14 @@
 
     <string name="three_dev_role"> Developer </string>
     <string name="three_dev_description">Biologist graduated from PUC Minas in 2022 and passionate about technology. \n\nCurrently pursuing a degree in Information Systems at PUC Minas, as well as a technical course in Systems Development with an emphasis on mobile applications at UFMG.</string>
+
+
+    <!-- Alerts for Users -->
+    <string name="error_signin">Error creating user.</string>
+    <string name="error_login">Incorrect email or password.</string>
+    <string name="error_empty">Please fill in all fields.</string>
+    <string name="error_duplicate"> Email is already used, choose another one!</string>
+
+    <string name="success_login">Login successful!</string>
+    <string name="success_signin">User created successfully!</string>
 </resources>

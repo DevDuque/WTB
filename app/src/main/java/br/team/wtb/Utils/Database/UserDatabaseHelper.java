@@ -1,4 +1,4 @@
-package br.team.wtb.Database;
+package br.team.wtb.Utils.Database;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;

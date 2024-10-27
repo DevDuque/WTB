@@ -3,8 +3,10 @@ package br.team.wtb.Screens.Register;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
@@ -20,8 +22,13 @@ import br.team.wtb.Utils.Theme.ThemeManager;
 public class LoginActivity extends AppCompatActivity {
 
     private LinearLayout switchContainer, signLink;
+
     private EditText loginInput, passwordInput;
+
     private Button loginBtn;
+
+    private ImageView logo;
+
     private UserDAO userDAO;
 
     @Override
@@ -44,12 +51,26 @@ public class LoginActivity extends AppCompatActivity {
         loginBtn = findViewById(R.id.btn_login);
         signLink = findViewById(R.id.option_sign);
 
+        logo = findViewById(R.id.logo);
+
         userDAO = new UserDAO(this);  // Inicializa o DAO
 
-        loginBtn.setOnClickListener(view -> loginUser());
-        signLink.setOnClickListener(view -> {
+        // Botões de Login e SignIn respectivamente
+        loginBtn.setOnClickListener(v -> loginUser());
+        signLink.setOnClickListener(v -> {
             Intent signScreen = new Intent(LoginActivity.this, SignInActivity.class);
             startActivity(signScreen);
+        });
+
+        // Deleta os usuários quando segurar na logo
+        logo.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                // Deletar todos os usuários
+                userDAO.deleteAll();
+                Toast.makeText(LoginActivity.this, "Todos os usuários foram deletados.", Toast.LENGTH_SHORT).show();
+                return true; // Retorna true para indicar que o evento foi tratado
+            }
         });
     }
 
@@ -58,7 +79,7 @@ public class LoginActivity extends AppCompatActivity {
         String password = passwordInput.getText().toString().trim();
 
         if (email.isEmpty() || password.isEmpty()) {
-            Toast.makeText(this, "Por favor, preencha todos os campos.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.error_empty, Toast.LENGTH_SHORT).show();
             return;
         }
 
@@ -66,7 +87,7 @@ public class LoginActivity extends AppCompatActivity {
 
         if (user != null) {
 
-            Toast.makeText(this, "Login bem-sucedido!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.success_login, Toast.LENGTH_SHORT).show();
             Intent homeScreen = new Intent(LoginActivity.this, HomeActivity.class);
 
             Log.d("LoginActivity", "Usuário logado com sucesso: " + user.toString());
@@ -74,7 +95,7 @@ public class LoginActivity extends AppCompatActivity {
             startActivity(homeScreen);
             finish();  // Fecha a tela de login
         } else {
-            Toast.makeText(this, "Email ou senha incorretos.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.error_login, Toast.LENGTH_SHORT).show();
         }
     }
 }

@@ -60,20 +60,27 @@ public class SignInActivity extends AppCompatActivity {
         String cellphone = cellphoneInput.getText().toString().trim();
 
         if (name.isEmpty() || email.isEmpty() || password.isEmpty() || cellphone.isEmpty()) {
-            Toast.makeText(this, "Por favor, preencha todos os campos.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.error_empty, Toast.LENGTH_SHORT).show();
             return;
         }
 
-        // Cria um novo usuário e insere no banco
-        User user = new User(name, email, cellphone, password);
-        boolean success = userDAO.insert(user);
+        // Verifica se o email já existe
+        if (userDAO.emailExists(email)) {
+            Toast.makeText(this, R.string.error_duplicate, Toast.LENGTH_SHORT).show();
+            return;
+        }
 
-        if (success) {
-            Toast.makeText(this, "Usuário criado com sucesso!", Toast.LENGTH_SHORT).show();
-            Log.d("SignInActivity", "Usuário criado com sucesso: " + user.toString());
+        // Cria um novo usuário
+        User newUser = new User(name, email, cellphone, password);
+        User createdUser = userDAO.insert(newUser);  // Tenta inserir o usuário
+
+        if (createdUser != null) {
+            Toast.makeText(this, R.string.success_signin, Toast.LENGTH_SHORT).show();
+
+            Log.d("SignInActivity", "Usuário criado com sucesso: " + createdUser.toString());
             finish();  // Fecha a tela de registro
         } else {
-            Toast.makeText(this, "Erro ao criar usuário.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.error_signin, Toast.LENGTH_SHORT).show();
         }
     }
 }
