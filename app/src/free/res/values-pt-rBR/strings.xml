@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name"> Watching The Beat </string>
+
+    <!-- Splash Screen -->
+    <string name="splash_title"> Sinfonia Cinematográfica </string>
+    <string name="splash_subtitle"> Quando o ritmo e a imagem contam histórias inesquecíveis </string>
+
+    <!-- Login Screen & SignIn Screen -->
+    <string name="email_label"> E-Mail </string>
+    <string name="name_label"> Nome </string>
+    <string name="cellphone_label"> Núm. de Telefone </string>
+    <string name="password_label"> Senha </string>
+
+    <string name="log_label"> Entrar GRATIS</string> <!-- MUDEI PARA TESTAR -->
+    <string name="sign_label"> Registrar </string>
+
+    <string name="option_login"> Não tem conta? </string>
+    <string name="option_sign"> Já tem conta? </string>
+
+    <string name="click_me"> Clique Aqui </string>
+
+    <string name="fav_screen">Seus Favoritos</string>
+
+    <!-- Acessibility -->
+    <string name="sun_accessibility"> Sol, representando o modo claro </string>
+    <string name="moon_accessibility"> Lua, representando o modo escuro </string>
+    <string name="splash_accessibility"> Claquete de filme com notas musicais e o texto Assistindo o Ritmo </string>
+    <string name="star_accessibility"> Estrelas representando a nota do filme </string>
+
+    <string name="share_accessbility"> Ícone de Compartilhar </string>
+    <string name="fav_accessbility"> Ícone de Favorito </string>
+    <string name="github_accessbility"> Ícone do GitHub </string>
+
+    <!-- Menu Items -->
+    <string name="menu_home">Início</string>
+
+    <string name="menu_share">Compartilhar</string>
+
+    <string name="menu_about">Sobre Nós</string>
+
+    <string name="menu_fav">Favoritos</string>
+
+    <string name="menu_exit">Sair</string>
+
+    <!-- Devs -->
+    <string name="one_dev_role"> Desenvolvedor &amp; Designer </string>
+    <string name="one_dev_description">Desenvolvedor Full-Stack na empresa de soluções tecnológicas Teknisa. \n\nAtualmente cursando Sistemas de Informação na PUC Minas, além de um curso técnico em Desenvolvimento de Sistemas com ênfase em aplicações móveis na UFMG.</string>
+
+    <string name="two_dev_role"> Desenvolvedor </string>
+    <string name="two_dev_description">Gerente de Estoque na empresa de vendas online SBBOX. \n\nAtualmente cursando um curso técnico em Desenvolvimento de Sistemas com ênfase em aplicações móveis na UFMG.</string>
+
+    <string name="three_dev_role"> Desenvolvedor </string>
+    <string name="three_dev_description">Biólogo formado pela PUC Minas em 2022 e apaixonado por tecnologia. \n\nAtualmente cursando Sistemas de Informação na PUC Minas, além de um curso técnico em Desenvolvimento de Sistemas com ênfase em aplicações móveis na UFMG.</string>
+
+    <!-- Alerts for Users -->
+    <string name="error_signin"> Erro ao criar usuário.</string>
+    <string name="error_login"> Email ou senha incorretos. </string>
+    <string name="error_empty">Por favor, preencha todos os campos.</string>
+    <string name="error_duplicate">O email já está em uso, escolha outro!</string>
+
+
+    <string name="success_login"> Login bem-sucedido! </string>
+    <string name="success_signin"> Usuário criado com sucesso! </string>
+</resources>

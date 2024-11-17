@@ -1,0 +1,7 @@
+<resources>
+    <!-- Login Screen & SignIn Screen -->
+    <string name="email_label"> E-Mail PAGA</string>
+    <string name="name_label"> Name PAGA</string>
+
+
+</resources>

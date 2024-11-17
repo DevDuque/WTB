@@ -92,6 +92,5 @@ public class HomeActivity extends AppCompatActivity {
         movieAdapter = new MovieAdapter(movieRepository.getMovies());
         moviesContainer.setAdapter(movieAdapter);
 
-
     }
 }

@@ -35,14 +35,16 @@ android {
 
     flavorDimensions.add("version")
     productFlavors {
-        create("free") {
-            applicationIdSuffix = ".free"
-            versionNameSuffix = "-free"
-            dimension = "version"
-        }
+
         create("paid") {
             applicationIdSuffix = ".paid"
             versionNameSuffix = "-paid"
+            dimension = "version"
+        }
+
+        create("free") {
+            applicationIdSuffix = ".free"
+            versionNameSuffix = "-free"
             dimension = "version"
         }
     }

@@ -1,0 +1,7 @@
+<resources>
+
+    <!-- Login Screen & SignIn Screen -->
+    <string name="email_label"> E-Mail GRATIS</string>
+    <string name="name_label"> Name Gratis</string>
+
+</resources>
