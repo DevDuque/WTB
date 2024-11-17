@@ -6,6 +6,8 @@ android {
     namespace = "br.team.wtb"
     compileSdk = 34
 
+
+
     defaultConfig {
         applicationId = "br.team.wtb"
         minSdk = 29
@@ -17,14 +19,34 @@ android {
     }
 
     buildTypes {
-        release {
-            isMinifyEnabled = false
+        getByName("release") {
+            isMinifyEnabled = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
         }
+        getByName("debug") {
+            isMinifyEnabled = false
+            applicationIdSuffix = ".debug"
+            isDebuggable = true
+        }
     }
+
+    flavorDimensions.add("version")
+    productFlavors {
+        create("free") {
+            applicationIdSuffix = ".free"
+            versionNameSuffix = "-free"
+            dimension = "version"
+        }
+        create("paid") {
+            applicationIdSuffix = ".paid"
+            versionNameSuffix = "-paid"
+            dimension = "version"
+        }
+    }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
