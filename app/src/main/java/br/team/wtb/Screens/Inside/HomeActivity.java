@@ -1,5 +1,6 @@
 package br.team.wtb.Screens.Inside;
 
+
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
@@ -23,6 +24,7 @@ import br.team.wtb.Utils.Menu.MenuController;
 import br.team.wtb.Utils.Movie.MovieAdapter;
 import br.team.wtb.Utils.Movie.MovieRepository;
 import br.team.wtb.Utils.Theme.ThemeManager;
+
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -89,5 +91,6 @@ public class HomeActivity extends AppCompatActivity {
         MovieRepository movieRepository = MovieRepository.getInstance();
         movieAdapter = new MovieAdapter(movieRepository.getMovies());
         moviesContainer.setAdapter(movieAdapter);
+
     }
 }
