@@ -17,9 +17,9 @@ public class MovieRepository {
         movieList = new ArrayList<>();
         // Adiciona filmes de exemplo ou busca de um banco de dados/API
         movieList.add(new Movie(R.drawable.img_poster_whiplash, "Whiplash", 2014, 5, false, "https://www.youtube.com/watch?v=iTgk3WbTErk&pp=ygUQd2hpcGxhc2ggdHJhaWxlcg%3D%3D"));
-        movieList.add(new Movie(R.drawable.img_poster_ray, "Ray", 2004, 4, true, "https://www.youtube.com/watch?v=jVHCQfcugdw&pp=ygULcmF5IHRyYWlsZXI%3D"));
+        movieList.add(new Movie(R.drawable.img_poster_ray, "Ray", 2004, 4, false, "https://www.youtube.com/watch?v=jVHCQfcugdw&pp=ygULcmF5IHRyYWlsZXI%3D"));
         movieList.add(new Movie(R.drawable.img_poster_once, "Once", 2008, 4, false, "https://www.youtube.com/watch?v=K4uFFNl6FQ4&pp=ygUMb25jZSB0cmFpbGVy"));
-        movieList.add(new Movie(R.drawable.img_poster_begin, "Begin Again", 2014, 4, true, "https://www.youtube.com/watch?v=uTRCxOE7Xzc&pp=ygUTYmVnaW4gYWdhaW4gdHJhaWxlcg%3D%3D"));
+        movieList.add(new Movie(R.drawable.img_poster_begin, "Begin Again", 2014, 4, false, "https://www.youtube.com/watch?v=uTRCxOE7Xzc&pp=ygUTYmVnaW4gYWdhaW4gdHJhaWxlcg%3D%3D"));
         movieList.add(new Movie(R.drawable.img_poster_bohemian, "Bohemian Rhapsody", 2018, 5, false, "https://www.youtube.com/watch?v=GryRsVhOvxo&pp=ygUQYm9oZW1pYW4gdHJhaWxlcg%3D%3D"));
     }
 

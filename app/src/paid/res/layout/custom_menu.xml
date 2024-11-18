@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/menu_panel"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical"
+
+    android:layout_gravity="center_horizontal"
+
+    android:background="?attr/theme_background_color"
+
+    android:paddingHorizontal="24dp">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="80dp"
+        android:layout_gravity="center_horizontal"
+
+        android:src="?attr/theme_bigger_logo"
+        android:contentDescription="@string/splash_accessibility"
+        />
+
+    <TextView
+        android:id="@+id/home_item"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:padding="16dp"
+        android:layout_marginTop="24dp"
+
+        android:textSize="18sp"
+        android:text="@string/menu_home"
+        android:textColor="?attr/theme_text_color"
+        android:fontFamily="@font/montserrat_bold"
+
+        android:drawablePadding="16dp"
+        app:drawableTint="?attr/theme_icon_color"
+        app:drawableStartCompat="@drawable/ic_home" />
+
+    <TextView android:id="@+id/share_item"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:padding="16dp"
+        android:layout_marginTop="16dp"
+
+        android:textSize="18sp"
+        android:text="@string/menu_share"
+        android:textColor="?attr/theme_text_color"
+        android:fontFamily="@font/montserrat_bold"
+
+        android:drawablePadding="16dp"
+        app:drawableTint="?attr/theme_icon_color"
+        app:drawableStartCompat="@drawable/ic_share" />
+
+    <TextView android:id="@+id/about_item"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:padding="16dp"
+        android:layout_marginTop="16dp"
+
+        android:textSize="18sp"
+        android:text="@string/menu_about"
+        android:textColor="?attr/theme_text_color"
+        android:fontFamily="@font/montserrat_bold"
+
+        android:drawablePadding="16dp"
+        app:drawableTint="?attr/theme_icon_color"
+        app:drawableStartCompat="@drawable/ic_about" />
+
+    <TextView android:id="@+id/fav_item"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:padding="16dp"
+        android:layout_marginTop="16dp"
+
+        android:textSize="18sp"
+        android:text="@string/menu_fav"
+        android:textColor="?attr/theme_text_color"
+        android:fontFamily="@font/montserrat_bold"
+
+        android:drawablePadding="16dp"
+        app:drawableTint="?attr/theme_icon_color"
+        app:drawableStartCompat="@drawable/ic_inactive_bookmark" />
+
+    <TextView android:id="@+id/exit_item"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:padding="16dp"
+        android:layout_marginTop="16dp"
+
+        android:textSize="18sp"
+        android:text="@string/menu_exit"
+        android:textColor="?attr/theme_text_color"
+        android:fontFamily="@font/montserrat_bold"
+
+        android:drawablePadding="16dp"
+        app:drawableTint="?attr/theme_icon_color"
+        app:drawableStartCompat="@drawable/ic_exit" />
+
+</LinearLayout>
