@@ -41,8 +41,7 @@
 //            public void onResponse(Call<MovieResponse> call, Response<MovieResponse> response) {
 //                if (response.isSuccessful() && response.body() != null) {
 //                    List<Movie> apiMovies = response.body().getResults();
-//                    Log.d("MovieRepository", "Filmes recebidos: " + apiMovies.size()); // Adicionado log
-//                    Log.d("MovieRepository", "Movies fetched from API: " + apiMovies);
+//                    Log.d("MovieRepository", "Filmes recebidos: " + apiMovies.size());
 //
 //                    // Limpa a lista de filmes antes de adicionar os novos
 //                    movieList.clear();
@@ -50,33 +49,31 @@
 //                    // Adiciona filmes à lista
 //                    for (Movie apiMovie : apiMovies) {
 //                        String title = apiMovie.getMovieName();
-//                        Log.d("MovieRepository", "Movies fetched from API: " + apiMovies);
+//                        Log.d("MovieRepository", "Filmes retornados da api: " + apiMovies);
 //                        String releaseDate = apiMovie.getMovieYear() != null ? apiMovie.getMovieYear().toString() : "Unknown Year";
 //
 //                        int year = 0;
 //                        if (!"Unknown Year".equals(releaseDate)) {
 //                            try {
-//                                year = Integer.parseInt(releaseDate.substring(0, 4));  // Check if the date format is correct
+//                                year = Integer.parseInt(releaseDate.substring(0, 4));
 //                            } catch (NumberFormatException e) {
-//                                Log.e("MovieRepository", "Invalid year format for movie: " + title);
+//                                Log.e("MovieRepository", "Invalid year format for movie: " + releaseDate);
 //                            }
 //                        }
 //
 //                        int rating = apiMovie.getMovieRating() != null ? apiMovie.getMovieRating() : 0;
 //
 //                        movieList.add(new Movie(
-//                                R.drawable.img_poster_whiplash,  // Placeholder image
+//                                R.drawable.img_poster_whiplash,
 //                                title,
 //                                year,
 //                                rating,
-//                                false,  // Default to non-favorite
 //                                apiMovie.getMovieTrailerLink()
 //                        ));
 //                    }
 //
-//
 //                    // Log para verificação
-//                    Log.d("MovieRepository", "Movies fetched successfully");
+//                    Log.d("MovieRepository", "Filmes carregados com sucesso!");
 //
 //                } else {
 //                    Log.e("MovieRepository", "Error: " + response.message());
@@ -85,7 +82,7 @@
 //
 //            @Override
 //            public void onFailure(Call<MovieResponse> call, Throwable t) {
-//                Log.e("MovieRepository", "API call failed: " + t.getMessage());
+//                Log.e("MovieRepository", "Chamada da API quebrou: " + t.getMessage());
 //            }
 //        });
 //    }
