@@ -6,8 +6,6 @@ android {
     namespace = "br.team.wtb"
     compileSdk = 34
 
-
-
     defaultConfig {
         applicationId = "br.team.wtb"
         minSdk = 29

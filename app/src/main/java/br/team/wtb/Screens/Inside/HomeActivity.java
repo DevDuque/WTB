@@ -8,21 +8,21 @@ import android.widget.ImageButton;
 import android.widget.LinearLayout;
 
 import androidx.activity.EdgeToEdge;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
+
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.recyclerview.widget.LinearLayoutManager;
+
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.LinearLayoutManager;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import br.team.wtb.Model.Movie;
 import br.team.wtb.R;
 import br.team.wtb.Utils.Constants;
 import br.team.wtb.Utils.Menu.MenuController;
+
 import br.team.wtb.Utils.Movie.MovieAdapter;
 import br.team.wtb.Utils.Movie.MovieRepository;
+
 import br.team.wtb.Utils.Theme.ThemeManager;
 
 
@@ -86,6 +86,13 @@ public class HomeActivity extends AppCompatActivity {
         // Inicializa o container de filmes
         moviesContainer = findViewById(R.id.movies_container);
         moviesContainer.setLayoutManager(new LinearLayoutManager(this));
+
+        // Pega o Repository (responsável pelo carregamento e adição de filmes) & Seta no Adapter
+//        MovieRepository movieRepository = MovieRepository.getInstance();
+//        movieRepository.fetchMoviesFromTMDB();
+//
+//        movieAdapter = new MovieAdapter(movieRepository.getMovies());
+//        moviesContainer.setAdapter(movieAdapter);
 
         // Pega o Repository (responsável pelo carregamento e adição de filmes) & Seta no Adapter
         MovieRepository movieRepository = MovieRepository.getInstance();
