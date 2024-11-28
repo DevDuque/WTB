@@ -37,7 +37,12 @@ public class MenuController {
         });
 
         shareItem.setOnClickListener(v -> {
-
+            String shareText =  "\nCheck out this project: \n" + "WTB: " + "github.com/devduque/WTB";
+            
+            Intent shareIntent = new Intent(Intent.ACTION_SEND);
+            shareIntent.setType("text/plain");
+            shareIntent.putExtra(Intent.EXTRA_TEXT, shareText);
+            v.getContext().startActivity(Intent.createChooser(shareIntent, "Share developer info via"));
         });
 
         aboutItem.setOnClickListener(v -> {
