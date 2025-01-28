@@ -1,11 +1,10 @@
 <h1 align="center">
-   Watching the Beat
+   <a href="https://www.figma.com/proto/AMGi53McWakFO7tQpIVrWL/Watching-the-Beat?page-id=18%3A632&node-id=18-714&p=f&viewport=767%2C789%2C0.25&t=aJo0aTSIPG8eUxp5-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=111%3A678&show-proto-sidebar=1"> Watching the Beat </a>
 </h1>
 
 <p align="center">
   <img src="./public/Capa.png" alt="WTB" />
 </p>
-
 
 ## 💻 Projeto
 O WTB é um aplicativo que une cinema e música, criando uma experiência imersiva onde imagem e som se complementam.  A proposta é explorar como a música amplifica as emoções nos filmes, proporcionando uma nova forma de apreciá-los.
